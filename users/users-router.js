@@ -1,11 +1,11 @@
 const router = require("express").Router();
 
-// Import data model
+
 const Users = require("./users-model");
 const restricted = require("../auth/authenticate-middleware");
 
-// Write CRUD operations
-router.get("/", restricted, (req, res) => {
+
+router.get("/",  (req, res) => {
   Users.find()
     .then(users => {
       console.log(users);
@@ -14,5 +14,5 @@ router.get("/", restricted, (req, res) => {
     .catch(err => res.send(err));
 });
 
-// Export router
+
 module.exports = router;

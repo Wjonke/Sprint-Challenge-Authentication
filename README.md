@@ -73,7 +73,7 @@ Implement an User Authentication System. Hash user's passwords before saving the
       A `user` has `username` and `password`. Both properties are required.
 
 
-- [ ] Implement the `authenticate` middleware inside `/auth/authenticate-middleware.js`.
+- [x] Implement the `authenticate` middleware inside `/auth/authenticate-middleware.js`.
 
 
 - [ ] Write a **minimum of 2 tests** for the API endpoints. Write more tests if you have time.

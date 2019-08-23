@@ -8,11 +8,11 @@ const Users = require("../users/users-model");
 const secrets = require("../config/secret");
 
 router.post("/register", (req, res) => {
-  let user = req.body;
-  const hash = bcrypt.hashSync(user.password, 12);
-  user.password = hash;
+  let users = req.body;
+  const hash = bcrypt.hashSync(users.password, 12);
+  users.password = hash;
 
-  Users.add(user)
+  Users.add(users)
     .then(saved => {
       res.status(201).json(saved);
     })
